@@ -1,0 +1,41 @@
+nav ul {
+    list-style: none;
+}
+nav ul ul {
+    position : absolute;
+    padding : 0;
+    display : none;
+}
+nav ul li {
+    float : left;
+    padding : 5px;
+}
+nav ul li:hover{
+    background-color: #f6f6f6;
+}
+nav ul li ul li{
+    float : none;
+}
+nav ul li:hover>ul{
+    display: block;
+    background-color: #ffffff;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    float: left;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+

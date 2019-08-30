@@ -1,0 +1,352 @@
+/*Default styles are here*/
+
+
+body{
+	overflow-x: hidden;
+	font-family: 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+
+}
+
+li{
+	list-style: none;
+	display: inline-block;
+}
+
+a{
+	text-decoration: none;
+	transition: all 500ms ease-in-out;
+}
+
+a:hover,
+a:active{
+	text-decoration: none;
+
+}
+
+h1,
+h2,
+h4{
+	font-family: 'PT Sans Narrow', Arial, sans-serif ;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+p{
+	font-size: 15px;
+	line-height: 21px;
+}
+
+.btn{
+	transition: all 300ms ease-in-out;
+	font-weight: 500 !important;
+	text-transform: uppercase;
+
+}
+
+.btn:hover{
+	background-color: #ededed !important;
+	color: #3c3c3c !important;
+	border: 1px  solid #fff !important;
+}
+
+
+/*Default styles end here*/
+
+/*navigation styling*/
+
+.icon {
+	float: left;
+	margin-right: -30px;
+	width: 100px;
+    height: 48px;
+    background: url(/img/icon1.png) center center no-repeat;
+}
+
+.navbar {
+	background-color: #222220 !important; 
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-bottom: -2px;
+	border-bottom: 2px solid #222220;
+}
+.navbar a:hover {
+	border-bottom: solid 2px #D34747;
+}
+
+@media(max-width:768px){
+	.navbar a:hover{
+		border-bottom: none;
+}
+}
+
+
+/*Header CSS begins here*/
+
+.header{
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+  }
+  
+  .header h1{
+	  color: rgb(228, 90, 90);
+	  text-align: center;
+	  font-size: 70px;
+	  margin-top: 250px;
+	  font-family: 'Roboto', sans-serif;
+  }
+  
+  .header h3{
+	  text-align: center;
+	  color:  rgb(228, 90, 90);
+  }
+  
+  .header span{
+	  font-size: 20px;
+	  position: relative;
+	  top: -10px;
+  }
+  
+  @media(max-width: 768px){
+	  .header h1{
+		  font-size: 50px;
+		  margin-top: 260px;
+	  }
+  
+	  .header h3{
+		  font-size: 15px;
+	  }
+  
+  }
+  
+  .flex-container {
+	  display: flex !important;
+	  border: 1px solid transparent !important;
+	  height: 100px;
+	  justify-content: center;
+  }
+  
+  .btn-grp{
+	  text-align: center;
+	  justify-content: center;
+	  align-self: center;
+  }
+  
+  .flex-1{
+	  margin-right: 5px;
+	  /* border-radius: 0; */
+	  border: 0;
+	  background-color: #1af8b5;
+  }
+
+  
+  /*pricing section css*/
+
+.pricing{
+	padding: 50px 80px;
+	text-align: center;
+	background-color: #bf5353;
+}
+
+.pricing h2, .pricing p{
+	color: #fff;
+}
+
+.pricing p{
+	padding-bottom:  40px;
+	padding-top: 20px;
+}
+
+.pricing .packages{
+	padding: 30px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-top: 30px;
+}
+
+.packages li{
+	display: block;
+	padding: 5px;
+}
+
+.packages h4, 
+.packages h1, 
+.packages b{
+	color: #4c4c4c;
+}
+
+.packages p,
+.packages li{
+	color: #737373;
+}
+
+.package button {
+	margin-top: 10px;
+}
+
+@media(max-width: 546px){
+	.pricing {
+		padding: 50px 0px;
+	}
+
+	.packages{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+/*sales section css begins here*/
+
+.sales{
+		padding: 150px 50px 0px 80px;
+		min-height: 600px;
+		color: #fff;
+		background-color:  #222220;
+}
+
+
+.sales #right-side{
+	margin-bottom: 50px;
+}
+
+.sales #right-side h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+}
+
+.sales #right-side p{
+	font-size: 17px;
+	text-align: justify;
+	line-height: 30px;
+	margin-top: 20px;
+}
+
+@media(max-width: 768px){	
+	.sales{
+	padding: 30px;
+	min-height: 500px;
+	margin-top: -10px;
+}
+	
+	.sales #right-side h1{
+		font-size: 25px;
+	}
+
+}
+
+
+
+
+/*mission section starts here*/
+
+.mission{
+	padding: 80px;
+	min-height: 600px;
+	padding-top: 120px;
+}
+
+.mission #left-side{
+	margin-bottom: 50px;
+}
+
+.mission #left-side h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+}
+
+.mission #left-side p{
+	margin-top: 20px;
+	font-size: 17px;
+	text-align: justify;
+	line-height: 30px;
+}
+
+.mission #right-side img{
+	min-height: 300px;
+	width: 350px;
+	margin-left: 200px;
+}
+
+@media(max-width: 834px){
+	.mission{
+		padding: 80px;
+		min-height: 600px;
+		margin-top: 20px;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.mission #right-side {
+		margin-top: 60px;
+		height: 100%;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.mission #left-side h1{
+		font-size: 17px;
+	}
+}
+
+/*mission section ends here*/
+
+
+/*footer starts here*/
+
+.footer {
+	padding: 30px;
+	color: #cccccc;
+	background-color: #222222;
+
+}
+
+.footer .social{
+	font-size: 20px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	padding: 2px;
+	margin-bottom: 15px;
+	margin-right: 5px;
+	color: #eee;
+
+}
+
+.footer input{
+	height: 40px;
+	width: 185px;
+	padding: 5px;
+	border: none;
+	background-color: #cccccc;
+}
+
+.footer .btn{
+	padding: 10px 5px 10px;
+	margin: -3px 0 0 5px;
+}
+
+@media(max-width: 768px){
+	.footer .btn{
+		margin: -2px 0px 0px 5px;
+	}
+}
+
+
+@media(max-width: 378px){
+	.footer .btn{
+		margin: 8px 10px 10px 5px;
+	}
+}
+
+
+
+
+
+
+
