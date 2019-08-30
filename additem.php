@@ -25,7 +25,8 @@ if (isset($_POST['add'])) { //adding
     //TODO: Do the PHP validation here to protect your server
     //Add the student
     $query = "INSERT INTO Item values ('$iId','$iName','$iDescription','$iPrice','$iImage')";
-    $result = queryMySql($query);
+    // $result = queryMySql($query);
+    $result = $pdo->prepare($query);
     if (!$result) {
         $error = $error . "<br>Can't add Item, please try again";
     } else {
