@@ -1,16 +1,16 @@
 <?php
-$dbhost = "localhost";
-$dbport = 3306;
-$dbuser = "root";
-$dbpassword = "";
-$dbname = "testheroku";
-$salt1 = "qm&h*";
-$salt2 = "!@#$%";
-//Connect to the DB
-$connection = new mysqli($dbhost, $dbuser, $dbpassword, $dbname, $dbport);
-if ($connection->connect_error) {
-    die ($connection->connect_error);
-}
+// $dbhost = "localhost";
+// $dbport = 3306;
+// $dbuser = "root";
+// $dbpassword = "";
+// $dbname = "testheroku";
+// $salt1 = "qm&h*";
+// $salt2 = "!@#$%";
+// //Connect to the DB
+// $connection = new mysqli($dbhost, $dbuser, $dbpassword, $dbname, $dbport);
+// if ($connection->connect_error) {
+//     die ($connection->connect_error);
+// }
 
 //this is used to execute all SQL queries
 function queryMysql($query) {

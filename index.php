@@ -9,10 +9,10 @@
 <body>
 
 <?php
-$host = "ec2-23-23-228-132.compute-1.amazonaws.com";
-$user = "pathbvkakoizfw";
-$password = "44a5b7b305c9601f84719ece23863707c6eb9216ba8a636e85383db3c9844cef";
-$dbname == "ddknfif5kdfq39";
+$host = "ec2-174-129-27-3.compute-1.amazonaws.com";
+$user = "xnfymqegbjgjii";
+$password = "69f05d08b3316353ec1028de67736472c5bde62e5d65bf8f27c1b733ec9f742f";
+$dbname == "d9pbv6u0tmbtpp";
 $port = "5432";
 try{
   //Set DSN data source name
@@ -29,7 +29,7 @@ echo 'Connection failed: ' . $e->getMessage();
 
 
 
-require_once './header.php';
+require_once './mainpage.php';
 ?>
     
 </body>
