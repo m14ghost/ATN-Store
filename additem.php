@@ -1,6 +1,6 @@
 <?php
 require_once 'menuadmin.php';
-
+require_once 'functions.php';
 //getting the data
 $error = $msg = "";
 if (isset($_POST['add'])) { //adding
@@ -24,9 +24,9 @@ if (isset($_POST['add'])) { //adding
     }
     //TODO: Do the PHP validation here to protect your server
     //Add the student
-    $query = "INSERT INTO Item values ('$iId','$iName','$iDescription','$iPrice','$iImage')";
-    // $result = queryMySql($query);
-    $result = $pdo->prepare($query);
+    $query = "INSERT INTO item values ('$iId','$iName','$iDescription','$iPrice','$iImage')";
+    $result = queryMySql($query);
+    // $result = $pdo->prepare($query);
     if (!$result) {
         $error = $error . "<br>Can't add Item, please try again";
     } else {

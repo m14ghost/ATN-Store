@@ -1,5 +1,6 @@
 <?php
 require_once './menuadmin.php';
+require_once './functions.php';
 
 $query = "SELECT iId, iName, iDescription, iPrice, iImage FROM Item";
 if(isset($_POST['keyword'])){
@@ -40,7 +41,7 @@ if (!$result){
         <th>Options</th>
     </tr>
     <?php
-    while ($row = mysqli_fetch_array($result)) {
+    while ($row = pg_fetch_array($result)) {
         $iId = $row[0];
         $iName = $row[1];
         $iDescription = $row[2];
@@ -51,7 +52,7 @@ if (!$result){
         echo "<td>$iName</td>";
         echo "<td>$iDescription</td>";
         echo "<td>$iPrice</td>";
-        echo "<td><img src='./img/". $iImage . "' height='10%'></td>";
+        echo "<td><img src='./images/". $iImage . "' height='10%'></td>";
         ?>
         <td>
             <form class="frminline" action="deleteitem.php" method="post" onsubmit="return confirmDelete();">
