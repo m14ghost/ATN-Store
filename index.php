@@ -38,7 +38,7 @@ echo 'Connection failed: ' . $e->getMessage();
 
 
 
-require_once './mainpage.php';
+// require_once './mainpage.php';
 ?>
     
 </body>
