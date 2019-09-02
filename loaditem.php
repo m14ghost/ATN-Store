@@ -19,13 +19,6 @@ if (!$result){
 <div class="login-form">
 <div class="main-div">
     <div class="panel">
-    <div>
-        <form action="loaditem.php" class="form-group" method="post">
-            <h4>Search Product</h4>
-            <input type="search" class="form-control" name="keyword"/><br>
-            <input type="submit" class="btn btn-primary" value="Go"/>
-         </form>
-    </div>
     </div>
 </div>
 </div>
