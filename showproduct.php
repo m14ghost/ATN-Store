@@ -19,14 +19,11 @@
 <body>
 <?php
 require_once 'functions.php';
-require_once 'mainpage.php';
 //load items
 $query = "SELECT iId, iName, iDescription, iPrice, iImage FROM item ";
 $result = queryMysql($query);
 $error = $msg = "";
-if (!$result){
-    $error = "Couldn't load data, please try again.";
-}
+
 
 ?>
 
@@ -73,7 +70,7 @@ if (!$result){
         
         <div class='sp w3-quarter w3-card w3-center'>
         <div>
-        <img onclick=\"document.getElementById('$iName').style.display='block'\" id='testimg' src='./img/". $iImage . "' width='100%'>
+        <img onclick=\"document.getElementById('$iName').style.display='block'\" id='testimg' src='./images/". $iImage . "' width='100%'>
         </div>
         <div class='name'><h4>$iName</h4>
         </div>
@@ -92,7 +89,7 @@ if (!$result){
             </div>
             <div class='w3-container w3-row'>
             <div class='w3-half'>
-                <img src='./img/". $iImage . "' width='100%'>
+                <img src='./images/". $iImage . "' width='100%'>
             </div>
             <div class='w3-half w3-left'>
                 <h3>Price $ $iPrice</h3>
