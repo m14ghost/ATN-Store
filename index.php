@@ -4,51 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Connecting Database</title>
+    <title>ATN - STORE</title>
 </head>
 <body>
 
 <?php
-// $host = "ec2-174-129-27-3.compute-1.amazonaws.com";
-// $user = "xnfymqegbjgjii";
-// $password = "69f05d08b3316353ec1028de67736472c5bde62e5d65bf8f27c1b733ec9f742f";
-// $database = "d9pbv6u0tmbtpp";
-// $port = "5432";
-// $connectString = 'host=' . $host . ' port=' . $port . ' dbname=' . $database . 
-// 	' user=' . $user . ' password=' . $password;
-// $link = pg_connect ($connectString);
-
-// if (!$link)
-// {
-// 	die('Error: Could not connect: ' . pg_last_error());
-// }
-
-// try {
-//   //Set DSN data source name
-//     $dsn = "pgsql:host=" . $host . ";port=" . $port .";dbname=" . $dbname . ";user=" . $user . ";password=" . $password . ";";
-// //   create a pdo instance
-//   $pdo = new PDO($dsn, $user, $password);
-//   $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
-//   $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-//   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// }
-// catch (PDOException $e) {
-// echo 'Connection failed: ' . $e->getMessage();
-// }
-
-
-$db = parse_url(getenv("DATABASE_URL"));
-$conn = new PDO("pgsql:" . sprintf(
-        "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-        $db["host"],
-        $db["port"],
-        $db["user"],
-        $db["pass"],
-        ltrim($db["path"], "/")
-));
-
-
-
 
 require_once './mainpage.php';
 
