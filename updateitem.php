@@ -1,15 +1,15 @@
 <?php
-require_once './menuadmin.php';
+require_once 'menuadmin.php';
 //Check to make sure that user is logged in first
 $error = $msg = "";
 if (isset($_POST['iName'])) { //updating
-    $iId = sanitizeString($_POST['iId']);
-    $iName = sanitizeString($_POST['iName']);
-    $iDescription = sanitizeString($_POST['iDescription']);
-    $iPrice = sanitizeString($_POST['iPrice']);
+    $iId = $_POST['iId'];
+    $iName = $_POST['iName'];
+    $iDescription = $_POST['iDescription'];
+    $iPrice = $_POST['iPrice'];
     
-    $uId = $_SESSION['uId'];
-    $query = "UPDATE Item SET iName = '$iName', iDescription = '$iDescription', iPrice = '$iPrice' WHERE iId = '$iId'";
+    
+    $query = "UPDATE item SET iName = '$iName', iDescription = '$iDescription', iPrice = '$iPrice' WHERE iId = '$iId'";
     $result = queryMysql($query);
     if (!$result) {
         $error = "Couldn't update item $iName, please try again";
@@ -19,11 +19,11 @@ if (isset($_POST['iName'])) { //updating
 }
 //for loading the data to the form
 if (isset($_POST['iId'])) {
-    $iId = sanitizeString($_POST['iId']);
+    $iId = $_POST['iId'];
     //Load the current data to that batch
-    $query = "SELECT iName, iDescription, iPrice FROM Item WHERE iId = '$iId'";
+    $query = "SELECT iName, iDescription, iPrice FROM item WHERE iId = '$iId'";
     $result = queryMysql($query);
-    $row = mysqli_fetch_array($result);
+    $row = pg_fetch_array($result);
     if ($row) {
         $iName = $row[0];
         $iDescription = $row[1];
