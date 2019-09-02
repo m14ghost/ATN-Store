@@ -19,7 +19,7 @@
 <body>
 <?php
 require_once 'functions.php';
-require_once 'menupage.php';
+require_once 'mainpage.php';
 //load items
 $query = "SELECT iId, iName, iDescription, iPrice, iImage FROM item ";
 $result = queryMysql($query);
