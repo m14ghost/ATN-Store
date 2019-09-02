@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product - ATN Store</title>
-    <link rel="icon" type="image/ico" href="/img/vip.png" />
+    <link rel="icon" type="image/ico" href="/images/vip.png" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style1.css">
@@ -70,7 +70,8 @@ $error = $msg = "";
         
         <div class='sp w3-quarter w3-card w3-center'>
         <div>
-        <img onclick=\"document.getElementById('$iName').style.display='block'\" id='testimg' src='./images/". $iImage . "' width='100%'>
+        <img onclick=\"document.getElementById('$iName').style.display='block'\" id='testimg' 
+        src='./images/". $iImage . "' width='100%'>
         </div>
         <div class='name'><h4>$iName</h4>
         </div>
