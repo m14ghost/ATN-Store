@@ -2,9 +2,9 @@
 require_once './menuadmin.php';
 require_once './functions.php';
 
-$query = "SELECT iId, iName, iDescription, iPrice, iImage FROM Item";
+$query = "SELECT iId, iName, iDescription, iPrice, iImage FROM item";
 if(isset($_POST['keyword'])){
-    $keyword = sanitizeString($_POST['keyword']);
+    $keyword = $_POST['keyword'];
     $query = $query . " WHERE iName LIKE '%$keyword%' OR iId LIKE '%$keyword%'";
 }
 $result = queryMysql($query);
@@ -41,7 +41,7 @@ if (!$result){
         <th>Options</th>
     </tr>
     <?php
-    while ($row = pg_fetch_array($result)) {
+    foreach ($result as $row) {
         $iId = $row[0];
         $iName = $row[1];
         $iDescription = $row[2];
@@ -68,6 +68,7 @@ if (!$result){
         echo "</tr>";
     }
     ?>
+    
     <script>
         function confirmDelete() {
             var r = confirm("Are you sure you would like to delete ?");

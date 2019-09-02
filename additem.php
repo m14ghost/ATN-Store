@@ -2,13 +2,13 @@
 require_once 'menuadmin.php';
 require_once 'functions.php';
 //getting the data
-$error = $msg = "";
+$msg = "";
 if (isset($_POST['add'])) { //adding
-    $iId = sanitizeString($_POST['iId']);
-    $iName = sanitizeString($_POST['iName']);
-    $iDescription = sanitizeString($_POST['iDescription']);
-    $iPrice = sanitizeString($_POST['iPrice']);   
-    $sImage = "";
+    $iId = $_POST['iId'];
+    $iName = $_POST['iName'];
+    $iDescription = $_POST['iDescription'];
+    $iPrice = $_POST['iPrice'];   
+    $iImage = "";
     $extension = "";
     //Process the uploaded image
     if (isset($_FILES['iImage']) && $_FILES['iImage']['size'] != 0) {
@@ -28,7 +28,7 @@ if (isset($_POST['add'])) { //adding
     $result = queryMySql($query);
     // $result = $pdo->prepare($query);
     if (!$result) {
-        $error = $error . "<br>Can't add Item, please try again";
+        $msg = "Can't add Item, please try again";
     } else {
         $msg = "Added $iName successfully!";
     }
@@ -44,12 +44,6 @@ if (isset($_POST['add'])) { //adding
     <form action="additem.php" method="POST" enctype="multipart/form-data">
     <div class="form-group">
         <fieldset class="fitContent">
-            <div class="error">
-                <?php echo $error; ?>
-            </div>
-            <div class="msg">
-                <?php echo $msg; ?>
-            </div>
             <legend>Add Item</legend>
 
             ID:
