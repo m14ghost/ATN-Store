@@ -52,10 +52,7 @@ if (!$result){
                 <input type="hidden" name="iId" value="<?php echo $row[0] ?>" />
                 <input type="submit" class="btn btn-primary" value="Delete" />
             </form>
-            <form class="frminline" action="updateitem.php" method="post">
-                <input type="hidden" name="iId" value="<?php echo $row[0] ?>" />
-                <input type="submit" class="btn btn-primary" value="Update" />
-            </form>
+
         </td>
         <?php
         echo "</tr>";
