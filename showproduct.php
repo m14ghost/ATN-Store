@@ -62,16 +62,12 @@ if (!$result){
      $query = "SELECT * FROM item";
      $result = queryMysql($query);
      $error = $msg = "";
-     if (!$result){
-      $error = "Couldn't load data, please try again.";
-     }
      foreach ($result as $row) {
         $iId = $row[0];
         $iName = $row[1];
         $iDescription = $row[2];
         $iPrice = $row[3];
-        $iSize = $row[4];
-        $iImage = $row[5];
+        $iImage = $row[4];
         
         echo "
         
