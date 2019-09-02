@@ -7,7 +7,9 @@ $conn = new PDO("pgsql:" . sprintf(
         $db["user"],
         $db["pass"],
         ltrim($db["path"], "/")
-    ));
+));
+
+require_once './mainpage.php';
 
 //this is used to execute all SQL queries
 function queryMysql($query) {
