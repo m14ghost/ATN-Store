@@ -1,6 +1,6 @@
 <?php
 require_once 'menuadmin.php';
-
+require_once 'functions.php';
 //getting the data
 $msg = "";
 if (isset($_POST['add'])) { //adding
