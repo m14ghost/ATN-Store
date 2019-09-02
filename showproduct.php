@@ -39,20 +39,9 @@ if (!$result){
                     <span class="icon-bar"></span>
                 </button>
                 <div class="icon"></div>   
-              <a  class="navbar-brand" href="main_page.php">V.I.P SHOP</a> 
+              <a  class="navbar-brand" href="mainpage.php">ATN Store</a> 
            </div>
-           <?php  
-          foreach ($result as $rowc) {
-          $Name = $rowc[1]; 
-          echo "                                             
-          <div >
-              <ul class='nav navbar-nav navbar-right'>
-                <li><a href='#'>$Name</a></li>
-              </ul>
-              
-          </div>";
-          }
-          ?>
+
            <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="showproduct.php">Product</a></li>
@@ -70,7 +59,6 @@ if (!$result){
 
 
 <?php
-     require_once 'functions.php';
      $query = "SELECT * FROM item";
      $result = queryMysql($query);
      $error = $msg = "";
