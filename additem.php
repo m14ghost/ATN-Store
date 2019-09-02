@@ -11,7 +11,7 @@ if (isset($_POST['add'])) { //adding
     $iImage = "";
     $extension = "";
     //Process the uploaded image
-    if (isset($_FILES['iImage']) && $_FILES['iImage']['size'] != 0) {
+    if (isset($_FILES['iImage']) && $_FILES['iImage'] != 0) {
         $temp_name = $_FILES['iImage']['tmp_name'];
         $name = $_FILES['iImage']['name'];
         $parts = explode(".", $name);
