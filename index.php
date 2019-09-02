@@ -10,7 +10,8 @@
 
 <?php
 
-require_once './mainpage.php';
+require_once 'functions.php';
+require_once 'mainpage.php';
 
 ?>
     

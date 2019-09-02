@@ -18,8 +18,8 @@
 </head>
 <body>
 <?php
-require_once './functions.php';
-require_once './menupage.php';
+require_once 'functions.php';
+require_once 'menupage.php';
 //load items
 $query = "SELECT iId, iName, iDescription, iPrice, iImage FROM item ";
 $result = queryMysql($query);
@@ -27,13 +27,7 @@ $error = $msg = "";
 if (!$result){
     $error = "Couldn't load data, please try again.";
 }
-//load catalogue
-$query1 = "SELECT cId, cName, cDescription from Catalogue";
-$result1 = queryMysql($query1);
-$error1 = $msg1 = "";
-if (!$result1){
-    $error1 = "Couldn't load data, please try again.";
-}
+
 ?>
 
     <div id="myNavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -48,7 +42,7 @@ if (!$result1){
               <a  class="navbar-brand" href="main_page.php">V.I.P SHOP</a> 
            </div>
            <?php  
-          while ($rowc = pg_fetch_array($result1)) {
+          foreach ($result as $rowc) {
           $Name = $rowc[1]; 
           echo "                                             
           <div >
@@ -76,14 +70,14 @@ if (!$result1){
 
 
 <?php
-     require_once './functions.php';
+     require_once 'functions.php';
      $query = "SELECT * FROM item";
      $result = queryMysql($query);
      $error = $msg = "";
      if (!$result){
       $error = "Couldn't load data, please try again.";
      }
-     while ($row = pg_fetch_array($result)) {
+     foreach ($result as $row) {
         $iId = $row[0];
         $iName = $row[1];
         $iDescription = $row[2];

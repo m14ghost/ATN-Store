@@ -1,6 +1,6 @@
 <?php
-require_once './menuadmin.php';
-require_once './functions.php';
+require_once 'menuadmin.php';
+require_once 'functions.php';
 
 $query = "SELECT iId, iName, iDescription, iPrice, iImage FROM item";
 if(isset($_POST['keyword'])){
