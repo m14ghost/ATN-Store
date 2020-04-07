@@ -1,2 +1,2 @@
 # ATN-Store
-A assignment project in my uni
+Assignment project in my uni
