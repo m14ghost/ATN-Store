@@ -112,9 +112,9 @@
     <div class="row">
       <div class="col-lg-4 col-md-4" >
         <h4>Contact us</h4>
-        <p><i class="fas fa-home"></i> My Dinh Dormitory, Ham Nghi, Nam Tu Liem, Ha Noi</p>
-        <p><i class="fas fa-envelope"></i> ducblagch17418@fpt.edu.vn</p>
-        <p><i class="fas fa-phone"></i> 0939981466</p>
+        <p><i class="fas fa-home"></i>Guess :))</p>
+        <p><i class="fas fa-envelope"></i> myemai@gmail.com</p>
+        <p><i class="fas fa-phone"></i> 0000000000</p>
       </div>
 
       <div class="col-lg-4 col-md-4" >
